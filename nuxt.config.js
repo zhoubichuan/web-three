@@ -1,5 +1,8 @@
 
 module.exports = {
+  env:{
+    baseUrl:process.env.NODE_ENV==='production'? 'localhost':'/'
+  },
   mode: 'universal',
   /*
   ** Headers of the page
@@ -18,11 +21,12 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#000' },
   /*
   ** Global CSS
   */
   css: [
+    "~assets/common.css",
     'element-ui/lib/theme-chalk/index.css'
   ],
   /*
