@@ -1,22 +1,28 @@
 {
-  "name": "vue-nuxt",
+  "name": "web-browser",
   "version": "1.0.0",
-  "description": "My terrific Nuxt.js project",
-  "author": "huipaodejitui",
+  "description": "",
+  "main": "index.js",
+  "author": "zhoubichaun@icloud.com",
+  "hommepage": "https://github.com/zhoubichuan/web-browser/",
   "private": true,
+  "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
-    "build": "nuxt build",
-    "start": "cross-env NODE_ENV=production node server/index.js",
-    "generate": "nuxt generate"
-  },
-  "dependencies": {
-    "cross-env": "^5.2.0",
-    "express": "^4.16.4",
-    "element-ui": "^2.4.11",
-    "nuxt": "^2.0.0"
+    "dev": "vuepress dev src",
+    "build": "vuepress build src",
+    "src:build": "vuepress build src",
+    "deploy": "bash deploy.sh",
+    "github": "bash github.sh",
+    "gitee": "bash gitee.sh"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9"
+    "@vuepress/plugin-active-header-links": "^1.8.2",
+    "@vuepress/plugin-back-to-top": "^1.8.2",
+    "@vuepress/plugin-blog": "^1.9.4",
+    "@vuepress/plugin-medium-zoom": "^1.8.2",
+    "@vuepress/plugin-nprogress": "^1.8.2",
+    "@vuepress/plugin-pwa": "^1.8.2",
+    "vuepress": "^1.8.2",
+    "vuepress-plugin-boxx": "0.0.7"
   }
 }

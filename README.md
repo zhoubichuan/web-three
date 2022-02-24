@@ -1,22 +1,24 @@
-# vue-nuxt
+# three.js 学习笔记
 
-> My terrific Nuxt.js project
+![一.Vue 的工程化](./src/.vuepress/public/home.png)
 
-## Build Setup
-
-``` bash
-# install dependencies
-$ npm run install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+- 基础知识
+  - [一.Vue 的工程化](https://zhoubichuan.github.io/web-browser/base/engine/1.index.html)
+  - [二.Vue 功能模块](https://zhoubichuan.github.io/web-browser/base/project/1.index.html)
+  - [三.Vue 2.x 基础](https://zhoubichuan.github.io/web-browser/base/vue2.x/1.index.html)
+  - [三.Vue 3.x 基础](https://zhoubichuan.github.io/web-browser/base/vue3.x/1.index.html)
+- 高级知识
+  - [一.Vue 组件开发](https://zhoubichuan.github.io/web-browser/senior/component/1.index.html)
+  - [二.Vue + TS](https://zhoubichuan.github.io/web-browser/senior/typescript/1.index.html)
+  - [三.构建部署](https://zhoubichuan.github.io/web-browser/senior/deploy/1.index.html)
+- Vue 2.x 源码
+  - [一.Vue/cli2.x](https://zhoubichuan.github.io/web-browser/source/vue-cli2.x/1.index.html)
+  - [二.Vue 2.x](https://zhoubichuan.github.io/web-browser/source/vue2.x/1.index.html)
+  - [三.Vue-Router3.x](https://zhoubichuan.github.io/web-browser/source/vue-router3.x/1.index.html)
+  - [四.Vuex3.x](https://zhoubichuan.github.io/web-browser/source/vuex3.x/1.index.html)
+- Vue 3.x 源码
+  - [一.Vue/cli3.x](https://zhoubichuan.github.io/web-browser/source/vue-cli3.x/1.index.html)
+  - [二.Vue 3.x](https://zhoubichuan.github.io/web-browser/source/vue3.x/1.index.html)
+  - [三.Vue-Router4.x](https://zhoubichuan.github.io/web-browser/source/vue-router4.x/1.index.html)
+  - [四.Vuex4.x](https://zhoubichuan.github.io/web-browser/source/vuex4.x/1.index.html)
+- [Vue 相关资料](https://zhoubichuan.github.io/web-browser/source/vuex4.x/1.index.html)
