@@ -1,7 +1,7 @@
 module.exports = {
   title: 'three.js学习笔记',
   description: '风浪没平息 我宣告奔跑的意义',
-  base: '/web-three.js/', // 部署站点的基础路径
+  base: '/web-three/', // 部署站点的基础路径
   port: 3009,
   dest: 'dist', // 指定 vuepress 的输出目录
   markdown: {

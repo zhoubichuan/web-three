@@ -73,10 +73,6 @@ const nav = [{
             link: '/source/vue-router3.x/1.index'
         }
     ]
-},
-{
-    text: 'Vue相关资料推荐',
-    link: '/read',
 }
 ]
 module.exports = nav
