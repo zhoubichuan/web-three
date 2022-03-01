@@ -2,7 +2,7 @@ const nav = [{
     text: '基础知识',
     items: [
         {
-            text: '一.DOM',
+            text: '一.three.js基本案例',
             link: '/base/engine/1.index'
         },
         {
