@@ -1,10 +1,10 @@
 {
-  "name": "web-browser",
+  "name": "web-three",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "author": "zhoubichaun@icloud.com",
-  "hommepage": "https://github.com/zhoubichuan/web-browser/",
+  "hommepage": "https://github.com/zhoubichuan/web-three/",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -26,10 +26,6 @@
     "vuepress-plugin-boxx": "0.0.7"
   },
   "dependencies": {
-    "@tweenjs/tween.js": "^18.6.4",
-    "dat.gui": "^0.7.9",
-    "stats": "^1.0.0",
-    "three": "^0.94.0",
     "vuepress-plugin-demo-container": "^0.2.0"
   }
 }
