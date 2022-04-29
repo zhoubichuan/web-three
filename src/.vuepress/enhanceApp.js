@@ -1,7 +1,7 @@
-import utils from '../base/engine/utils.vue';
+import xminder from './xmind.vue';
 
 export default ({
     Vue
 }) => {
-    Vue.component('engineutils', utils);
+    Vue.component('xminder', xminder);
 }
