@@ -59,7 +59,7 @@ module.exports = {
     docsBranch: 'master', // 假如文档放在一个特定的分支下
     editLinks: true, // 启用编辑
     editLinkText: '在github上编辑此页',
-    sidebarDepth: 2,
+    sidebarDepth: 0,
     lastUpdated: '上次更新', // 获取每个文件最后一次 git 提交的时间戳
     nav: require('./nav.js'),
     sidebar: require('./sidebar.js'),
