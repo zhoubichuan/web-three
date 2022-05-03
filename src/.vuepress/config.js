@@ -10,10 +10,22 @@ module.exports = {
     lineNumbers: true // 代码块显示行号
   },
   head: [
-    ['script', { src: 'https://cdn.bootcdn.net/ajax/libs/three.js/r94/three.min.js'}],
-    ['script', { src: 'https://cdn.bootcdn.net/ajax/libs/tween.js/18.6.0/tween.umd.min.js'}],
-    ['script', { src: 'https://cdn.bootcdn.net/ajax/libs/dat-gui/0.7.6/dat.gui.min.js'}],
-    ['script', { src: 'https://cdn.bootcdn.net/ajax/libs/stats.js/r16/Stats.min.js'}],
+    
+    ['script', { src: '/libs/three.js'}],
+    ['script', { src: '/libs/ParametricGeometries.js'}],
+    ['script', { src: '/libs/ConvexGeometry.js'}],
+    ['script', { src: '/libs/stats.js'}],
+    ['script', { src: '/libs/dat.gui.js'}],
+    ['script', { src: '/libs/dat.gui.js'}],
+    ['script', { src: '/libs/tween.min.js'}],
+    ['script', { src: '/libs/WebGLDeferredRenderer.js'}],
+    ['script', { src: '/libs/ShaderDeferred.js'}],
+    ['script', { src: '/libs/RenderPass.js'}],
+    ['script', { src: '/libs/EffectComposer.js'}],
+    ['script', { src: '/libs/CopyShader.js'}],
+    ['script', { src: '/libs/ShaderPass.js'}],
+    ['script', { src: '/libs/FXAAShader.js'}],
+    ['script', { src: '/libs/MaskPass.js'}],
   ],
   plugins: {
     'vuepress-plugin-anchor-toc': {
