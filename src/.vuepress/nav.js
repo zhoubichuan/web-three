@@ -26,7 +26,6 @@ const nav = [{
             text: '一.DOM Tree、CSSOM',
             link: '/senior/1.micro/1.index'
         },
-
         {
             text: '二.渲染、绘制',
             link: '/senior/2.typescript/1.index'
@@ -38,27 +37,11 @@ const nav = [{
         {
             text: '四.事件循环',
             link: '/senior/4.component/1.index'
-        },
-        {
-            text: '五.垃圾回收',
-            link: '/senior/5/1.index'
-        },
-        {
-            text: '六.webkit深入',
-            link: '/senior/6/1.index'
-        },
-        {
-            text: '七.引擎',
-            link: '/senior/7/1.index'
-        },
-        {
-            text: '八.v8',
-            link: '/senior/8/1.index'
-        },
+        }
     ]
 },
 {
-    text: 'Vue 2.x源码',
+    text: 'three.js源码',
     items: [
         {
             text: '一.Vue/cli2.x',

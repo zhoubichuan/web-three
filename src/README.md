@@ -16,19 +16,19 @@ meta:
     <div id="large-header" class="large-header"></div>
     <div class="features">
       <div class="feature">
-        <h2><a href="/web-three/base/engine/1.index.html">浏览器相关知识</a></h2> 
-        <p>掌握创建一个项目所需的工具、环境、配置、技术选型、场景应用、技巧、优化、部署等常见流程</p>
+        <h2><a href="/web-three/base/engine/1.index.html">基础知识</a></h2> 
+        <p>掌握three.js基础知识点，对整个体系有大概的了解</p>
       </div>
       <div class="feature">
-        <h2><a href="/web-three/base/project/1.index.html">Vue功能模块</a></h2> 
-        <p>掌握一般项目中的配置、包管理、登录、权限、测试、监控、国际化、服务端渲染、富文本、上传下载等常见功能</p>
+        <h2><a href="/web-three/base/project/1.index.html">基础案例</a></h2> 
+        <p>掌握three.js几何、材质、光源、粒子、模型、动画、纹理等相关场景的案例开发</p>
       </div>
       <div class="feature">
-        <h2><a href="/web-three/base/vue2.x/1.index.html">Vue基础知识</a></h2> 
+        <h2><a href="/web-three/base/vue2.x/1.index.html">综合案例</a></h2> 
         <p>掌握Vue2.x全家桶和Vue3.x全家桶中重点知识，对相关官方文档进行一些知识的补充，全面提升Vue的基础知识能力</p>
       </div>
       <div class="feature">
-        <h2><a href="/web-three/senior/component/1.index.html">Vue组件开发</a></h2> 
+        <h2><a href="/web-three/senior/component/1.index.html">复杂案例</a></h2> 
         <p>了解组件设计思路，组件编写工作流搭建，从0编写复杂组件之异步级联组件 单元测试编写及组件的发布</p>
       </div>
       <div class="feature">
