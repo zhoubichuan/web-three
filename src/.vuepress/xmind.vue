@@ -26,43 +26,92 @@ export default {
           format: "node_tree",
           data: {
             id: "root",
-            topic: "容器（Map）",
+            topic: "材质（Material）",
             children: [
               {
-                id: "easy",
-                topic: "地图视图（View）",
-                direction: "right",
-              },
-              {
-                id: "open",
-                topic: "地图图层（Layer）",
+                id: "point",
+                topic: "点材质",
                 direction: "right",
                 children: [
                   {
-                    id: "open1",
-                    topic: "数据源（Source）",
-                  },
-                  { id: "open2", topic: "图层样式（Style）" },
-                  {
-                    id: "open3",
-                    topic: "图层要素（Feature）",
+                    id: "point1",
+                    topic: "PointsMaterial",
                   },
                 ],
               },
               {
-                id: "powerful",
-                topic: "交互操作控件（Interactions）",
+                id: "line",
+                topic: "线材质",
                 direction: "right",
+                children: [
+                  {
+                    id: "line1",
+                    topic: "构造函数首字母Line开头材质",
+                  },
+                  { id: "line2", topic: "线基础材质（LineBasicMaterial）" },
+                  {
+                    id: "line3",
+                    topic: "虚线材质（LineDashedMaterial）",
+                  },
+                ],
               },
               {
-                id: "Overlays",
-                topic: "叠加层（Overlays）",
+                id: "grid",
+                topic: "网格材质",
                 direction: "right",
+                children: [
+                  {
+                    id: "grid1",
+                    topic: "构造函数首字母Mesh开头材质",
+                  },
+                  { id: "grid2", topic: "网格基础材质（MeshBasicMaterial）" },
+                  {
+                    id: "grid3",
+                    topic: "网格Lambert材质（MeshLambertMaterial）",
+                  },
+                  {
+                    id: "grid4",
+                    topic: "网格Phong材质（MeshPhongMaterial）",
+                  },
+                  {
+                    id: "grid5",
+                    topic: "PBR材质（MeshStandardMaterial）",
+                  },
+                  {
+                    id: "grid6",
+                    topic: "网格深度材质（MeshDepthMaterial）",
+                  },
+                  {
+                    id: "grid7",
+                    topic: "网格法向量材质（MeshNormalMaterial）",
+                  },
+                ],
               },
               {
-                id: "Control",
-                topic: "操作控件（Control）",
+                id: "sprite",
+                topic: "精灵Sprite材质",
                 direction: "right",
+                children: [
+                  {
+                    id: "sprite1",
+                    topic: "SpriteMaterial",
+                  },
+                ],
+              },
+              {
+                id: "shaders",
+                topic: "自定义着色器材质",
+                direction: "right",
+                children: [
+                  {
+                    id: "shaders1",
+                    topic: "RawShaderMaterial",
+                  },
+                  {
+                    id: "shaders2",
+                    topic: "ShaderMaterial",
+                  },
+                ],
               },
             ],
           },
@@ -75,26 +124,41 @@ export default {
           format: "node_tree",
           data: {
             id: "root",
-            topic: "Layer",
+            topic: "Three.js",
             children: [
               {
-                id: "easy",
-                topic: "Tile（瓦片）",
+                id: "Scene",
+                topic: "Scene（场景）",
                 direction: "right",
               },
               {
-                id: "open",
-                topic: "Image（图片）",
+                id: "Camera",
+                topic: "Camera（相机）",
                 direction: "right",
               },
               {
-                id: "powerful",
-                topic: "Vector（矢量）",
+                id: "Mesh",
+                topic: "Mesh（模型）",
                 direction: "right",
               },
               {
-                id: "Overlays",
-                topic: "VectorTile（矢量切片）",
+                id: "Geometry",
+                topic: "Geometry（形状）",
+                direction: "right",
+              },
+              {
+                id: "Material",
+                topic: "Material（材质）",
+                direction: "right",
+              },
+              {
+                id: "Points",
+                topic: "Points（粒子）",
+                direction: "right",
+              },
+              {
+                id: "Renderer",
+                topic: "Renderer（渲染）",
                 direction: "right",
               },
             ],
