@@ -14,7 +14,7 @@ const nav = [{
             link: '/base/vue2.x/1.index'
         },
         {
-            text: '四.复杂案例',
+            text: '四.动画案例',
             link: '/base/vue3.x/1.index'
         }
     ]
