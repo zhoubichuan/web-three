@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>基础案例 | three.js学习笔记</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <script src="/web-three/libs/three.js"></script>
+    <script src="/web-three/libs/stats.js"></script>
+    <script src="/web-three/libs/dat.gui.js"></script>
+    <script src="/web-three/libs/CanvasRenderer.js"></script>
+    <script src="/web-three/libs/Projector.js"></script>
+    <script src="/web-three/libs/tween.min.js"></script>
+    <script src="/web-three/libs/ParametricGeometries.js"></script>
+    <script src="/web-three/libs/ConvexGeometry.js"></script>
+    <script src="/web-three/libs/WebGLDeferredRenderer.js"></script>
+    <script src="/web-three/libs/ShaderDeferred.js"></script>
+    <script src="/web-three/libs/RenderPass.js"></script>
+    <script src="/web-three/libs/EffectComposer.js"></script>
+    <script src="/web-three/libs/CopyShader.js"></script>
+    <script src="/web-three/libs/ShaderPass.js"></script>
+    <script src="/web-three/libs/FXAAShader.js"></script>
+    <script src="/web-three/libs/MaskPass.js"></script>
+    <script src="/web-three/libs/d3-threeD.js"></script>
+    <script src="/web-three/libs/OrbitControls.js"></script>
+    <script src="/web-three/libs/spin.js"></script>
+    <script src="/web-three/libs/ThreeBSP.js"></script>
+    <script src="/web-three/libs/SceneLoader.js"></script>
+    <script src="/web-three/libs/SceneExporter.js"></script>
+    <script src="/web-three/libs/OBJLoader.js"></script>
+    <script src="/web-three/libs/chroma.js"></script>
+    <script src="/web-three/libs/TrackballControls.js"></script>
+    <script src="/web-three/libs/RollControls.js"></script>
+    <script src="/web-three/libs/FirstPersonControls.js"></script>
+    <script src="/web-three/libs/FlyControls.js"></script>
+    <script src="/web-three/libs/MTLLoader.js"></script>
+    <script src="/web-three/libs/OBJMTLLoader.js"></script>
+    <script src="/web-three/libs/ColladaLoader.js"></script>
+    <script src="/web-three/libs/STLLoader.js"></script>
+    <script src="/web-three/libs/CTMLoader.js"></script>
+    <script src="/web-three/libs/ctm.js"></script>
+    <script src="/web-three/libs/CTMWorker.js"></script>
+    <script src="/web-three/libs/lzma.js"></script>
+    <script src="/web-three/libs/VTKLoader.js"></script>
+    <script src="/web-three/libs/PDBLoader.js"></script>
+    <script src="/web-three/libs/PLYLoader.js"></script>
+    <script src="/web-three/libs/AWDLoader.js"></script>
+    <script src="/web-three/libs/AssimpJSONLoader.js"></script>
+    <script src="/web-three/libs/VRMLLoader.js"></script>
+    <script src="/web-three/libs/BabylonLoader.js"></script>
+    <script src="/web-three/libs/perlin.js"></script>
+    <script src="/web-three/libs/glTFLoaderUtils.js"></script>
+    <script src="/web-three/libs/glTFAnimation.js"></script>
+    <script src="/web-three/libs/glTFLoader.js"></script>
+    <script src="/web-three/libs/glTF-parser.js"></script>
+    <script src="/web-three/libs/DDSLoader.js"></script>
+    <script src="/web-three/libs/PVRLoader.js"></script>
+    <script src="/web-three/libs/TGALoader.js"></script>
+    <script src="/web-three/libs/literally/jquery-1.8.2.js"></script>
+    <script src="/web-three/libs/literally/underscore-1.4.2.js"></script>
+    <script src="/web-three/libs/literally/js/literallycanvas.js"></script>
+    <script src="/web-three/assets/fonts/helvetiker_regular.typeface.js"></script>
+    <script src="/web-three/assets/fonts/helvetiker_bold.typeface.js"></script>
+    <script src="/web-three/assets/fonts/bitstream_vera_sans_mono_roman.typeface.js"></script>
+    <script src="/web-three/libs/postprocessing/FilmPass.js"></script>
+    <script src="/web-three/libs/shaders/FilmShader.js"></script>
+    <script src="/web-three/libs/physi.js"></script>
+    <meta name="description" content="个人总结的vuepress学习技术文档-主题">
+    <meta name="keywords" content="vuepress,最新技术文档,vuepress主题">
+    
+    <link rel="preload" href="/web-three/assets/css/0.styles.dd3cf467.css" as="style"><link rel="preload" href="/web-three/assets/js/app.90d423e6.js" as="script"><link rel="preload" href="/web-three/assets/js/3.53e65a00.js" as="script"><link rel="preload" href="/web-three/assets/js/57.2d882207.js" as="script"><link rel="preload" href="/web-three/assets/js/49.baa472db.js" as="script"><link rel="prefetch" href="/web-three/assets/js/1.d4f2820e.js"><link rel="prefetch" href="/web-three/assets/js/10.36d49796.js"><link rel="prefetch" href="/web-three/assets/js/100.db4f92c2.js"><link rel="prefetch" href="/web-three/assets/js/101.5a433f60.js"><link rel="prefetch" href="/web-three/assets/js/102.cb187840.js"><link rel="prefetch" href="/web-three/assets/js/103.b2262d25.js"><link rel="prefetch" href="/web-three/assets/js/104.ad31ada8.js"><link rel="prefetch" href="/web-three/assets/js/105.74dbab1f.js"><link rel="prefetch" href="/web-three/assets/js/106.21c6896b.js"><link rel="prefetch" href="/web-three/assets/js/107.e53450c3.js"><link rel="prefetch" href="/web-three/assets/js/108.32538eef.js"><link rel="prefetch" href="/web-three/assets/js/109.e40d4307.js"><link rel="prefetch" href="/web-three/assets/js/11.dc873dd8.js"><link rel="prefetch" href="/web-three/assets/js/110.89ca47dc.js"><link rel="prefetch" href="/web-three/assets/js/111.0608647d.js"><link rel="prefetch" href="/web-three/assets/js/112.8e0a139d.js"><link rel="prefetch" href="/web-three/assets/js/113.a9674b15.js"><link rel="prefetch" href="/web-three/assets/js/114.de5587b7.js"><link rel="prefetch" href="/web-three/assets/js/115.91689367.js"><link rel="prefetch" href="/web-three/assets/js/116.bad2d98c.js"><link rel="prefetch" href="/web-three/assets/js/117.29f37fc0.js"><link rel="prefetch" href="/web-three/assets/js/118.4ef58adf.js"><link rel="prefetch" href="/web-three/assets/js/119.862e93b5.js"><link rel="prefetch" href="/web-three/assets/js/12.6e657954.js"><link rel="prefetch" href="/web-three/assets/js/120.8411e983.js"><link rel="prefetch" href="/web-three/assets/js/121.dbc5b63c.js"><link rel="prefetch" href="/web-three/assets/js/13.6d0b8dbf.js"><link rel="prefetch" href="/web-three/assets/js/14.be74fdc5.js"><link rel="prefetch" href="/web-three/assets/js/15.1d0c98a4.js"><link rel="prefetch" href="/web-three/assets/js/16.98ea1fc9.js"><link rel="prefetch" href="/web-three/assets/js/17.df252457.js"><link rel="prefetch" href="/web-three/assets/js/18.67c0bd3a.js"><link rel="prefetch" href="/web-three/assets/js/19.a68ab10a.js"><link rel="prefetch" href="/web-three/assets/js/20.fd4fda3e.js"><link rel="prefetch" href="/web-three/assets/js/21.c9be492b.js"><link rel="prefetch" href="/web-three/assets/js/22.c232a62c.js"><link rel="prefetch" href="/web-three/assets/js/23.ca0f8ba4.js"><link rel="prefetch" href="/web-three/assets/js/24.6474638e.js"><link rel="prefetch" href="/web-three/assets/js/25.9a09265c.js"><link rel="prefetch" href="/web-three/assets/js/26.53647371.js"><link rel="prefetch" href="/web-three/assets/js/27.af765f26.js"><link rel="prefetch" href="/web-three/assets/js/28.fe623436.js"><link rel="prefetch" href="/web-three/assets/js/29.2563e429.js"><link rel="prefetch" href="/web-three/assets/js/30.a1084a58.js"><link rel="prefetch" href="/web-three/assets/js/31.978ef2ff.js"><link rel="prefetch" href="/web-three/assets/js/32.33da1a6c.js"><link rel="prefetch" href="/web-three/assets/js/33.1bb93948.js"><link rel="prefetch" href="/web-three/assets/js/34.2ab2d2f9.js"><link rel="prefetch" href="/web-three/assets/js/35.ab5dab93.js"><link rel="prefetch" href="/web-three/assets/js/36.886f7b71.js"><link rel="prefetch" href="/web-three/assets/js/37.0a7cec80.js"><link rel="prefetch" href="/web-three/assets/js/38.69f5021b.js"><link rel="prefetch" href="/web-three/assets/js/39.d803644c.js"><link rel="prefetch" href="/web-three/assets/js/4.75187c5d.js"><link rel="prefetch" href="/web-three/assets/js/40.b6fdcd1f.js"><link rel="prefetch" href="/web-three/assets/js/41.e64d9b89.js"><link rel="prefetch" href="/web-three/assets/js/42.7cf76654.js"><link rel="prefetch" href="/web-three/assets/js/43.b3d5955c.js"><link rel="prefetch" href="/web-three/assets/js/44.f4ff3823.js"><link rel="prefetch" href="/web-three/assets/js/45.81ba5fa7.js"><link rel="prefetch" href="/web-three/assets/js/46.a5d382b4.js"><link rel="prefetch" href="/web-three/assets/js/47.405a4df3.js"><link rel="prefetch" href="/web-three/assets/js/48.da0bc870.js"><link rel="prefetch" href="/web-three/assets/js/5.cdee4295.js"><link rel="prefetch" href="/web-three/assets/js/50.1c192079.js"><link rel="prefetch" href="/web-three/assets/js/51.55926d94.js"><link rel="prefetch" href="/web-three/assets/js/52.2f82311d.js"><link rel="prefetch" href="/web-three/assets/js/53.e5536e8f.js"><link rel="prefetch" href="/web-three/assets/js/54.da160c4c.js"><link rel="prefetch" href="/web-three/assets/js/55.05ce6c6a.js"><link rel="prefetch" href="/web-three/assets/js/56.64517811.js"><link rel="prefetch" href="/web-three/assets/js/58.43cc998f.js"><link rel="prefetch" href="/web-three/assets/js/59.c4280067.js"><link rel="prefetch" href="/web-three/assets/js/6.47601c32.js"><link rel="prefetch" href="/web-three/assets/js/60.8980bb05.js"><link rel="prefetch" href="/web-three/assets/js/61.eefd3116.js"><link rel="prefetch" href="/web-three/assets/js/62.ce9ea4c2.js"><link rel="prefetch" href="/web-three/assets/js/63.fb0e07bb.js"><link rel="prefetch" href="/web-three/assets/js/64.f4f9bb4a.js"><link rel="prefetch" href="/web-three/assets/js/65.ae3b168d.js"><link rel="prefetch" href="/web-three/assets/js/66.e6a79f9d.js"><link rel="prefetch" href="/web-three/assets/js/67.1296d2c0.js"><link rel="prefetch" href="/web-three/assets/js/68.e04bf185.js"><link rel="prefetch" href="/web-three/assets/js/69.64fb57e2.js"><link rel="prefetch" href="/web-three/assets/js/7.e8b6057c.js"><link rel="prefetch" href="/web-three/assets/js/70.53b720fe.js"><link rel="prefetch" href="/web-three/assets/js/71.c730df40.js"><link rel="prefetch" href="/web-three/assets/js/72.17fe3210.js"><link rel="prefetch" href="/web-three/assets/js/73.19517423.js"><link rel="prefetch" href="/web-three/assets/js/74.592a0d6a.js"><link rel="prefetch" href="/web-three/assets/js/75.9e69484e.js"><link rel="prefetch" href="/web-three/assets/js/76.7993d351.js"><link rel="prefetch" href="/web-three/assets/js/77.96e45cc3.js"><link rel="prefetch" href="/web-three/assets/js/78.9528e8d7.js"><link rel="prefetch" href="/web-three/assets/js/79.cf4a221e.js"><link rel="prefetch" href="/web-three/assets/js/8.88f46039.js"><link rel="prefetch" href="/web-three/assets/js/80.19a1ca12.js"><link rel="prefetch" href="/web-three/assets/js/81.450b874f.js"><link rel="prefetch" href="/web-three/assets/js/82.0e38ded3.js"><link rel="prefetch" href="/web-three/assets/js/83.9041ac9d.js"><link rel="prefetch" href="/web-three/assets/js/84.c1d1f51e.js"><link rel="prefetch" href="/web-three/assets/js/85.ceaaf0a0.js"><link rel="prefetch" href="/web-three/assets/js/86.959b5b79.js"><link rel="prefetch" href="/web-three/assets/js/87.303d5e76.js"><link rel="prefetch" href="/web-three/assets/js/88.e3f29552.js"><link rel="prefetch" href="/web-three/assets/js/89.53c3c47a.js"><link rel="prefetch" href="/web-three/assets/js/9.2b32e60b.js"><link rel="prefetch" href="/web-three/assets/js/90.8969fe7e.js"><link rel="prefetch" href="/web-three/assets/js/91.21e89693.js"><link rel="prefetch" href="/web-three/assets/js/92.a740d91b.js"><link rel="prefetch" href="/web-three/assets/js/93.91762497.js"><link rel="prefetch" href="/web-three/assets/js/94.854d74fe.js"><link rel="prefetch" href="/web-three/assets/js/95.5c0d7728.js"><link rel="prefetch" href="/web-three/assets/js/96.ad73fe2d.js"><link rel="prefetch" href="/web-three/assets/js/97.64f622f1.js"><link rel="prefetch" href="/web-three/assets/js/98.362a5d36.js"><link rel="prefetch" href="/web-three/assets/js/99.c4558afb.js">
+    <link rel="stylesheet" href="/web-three/assets/css/0.styles.dd3cf467.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/web-three/" class="home-link router-link-active"><!----> <span class="site-name">three.js学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="基础知识" class="dropdown-title"><span class="title">基础知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="基础知识" class="mobile-dropdown-title"><span class="title">基础知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web-three/base/engine/1.index.html" class="nav-link">
+  一.基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/web-three/base/project/1.index.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  二.基础案例
+</a></li><li class="dropdown-item"><!----> <a href="/web-three/base/vue2.x/1.index.html" class="nav-link">
+  三.模型案例
+</a></li><li class="dropdown-item"><!----> <a href="/web-three/base/vue3.x/1.index.html" class="nav-link">
+  四.动画案例
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="高级知识" class="dropdown-title"><span class="title">高级知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="高级知识" class="mobile-dropdown-title"><span class="title">高级知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web-three/senior/1.micro/1.index.html" class="nav-link">
+  一.DOM Tree、CSSOM
+</a></li><li class="dropdown-item"><!----> <a href="/web-three/senior/2.typescript/1.index.html" class="nav-link">
+  二.渲染、绘制
+</a></li><li class="dropdown-item"><!----> <a href="/web-three/senior/3.deploy/1.index.html" class="nav-link">
+  三.会话
+</a></li><li class="dropdown-item"><!----> <a href="/web-three/senior/4.component/1.index.html" class="nav-link">
+  四.事件循环
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="three.js源码" class="dropdown-title"><span class="title">three.js源码</span> <span class="arrow down"></span></button> <button type="button" aria-label="three.js源码" class="mobile-dropdown-title"><span class="title">three.js源码</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web-three/source/vue-cli2.x/1.index.html" class="nav-link">
+  一.Vue/cli2.x
+</a></li><li class="dropdown-item"><!----> <a href="/web-three/source/vue2.x/1.index.html" class="nav-link">
+  二.Vue 2.x
+</a></li><li class="dropdown-item"><!----> <a href="/web-three/source/vue-router3.x/1.index.html" class="nav-link">
+  三.Vue-Router3.x
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="基础知识" class="dropdown-title"><span class="title">基础知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="基础知识" class="mobile-dropdown-title"><span class="title">基础知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web-three/base/engine/1.index.html" class="nav-link">
+  一.基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/web-three/base/project/1.index.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  二.基础案例
+</a></li><li class="dropdown-item"><!----> <a href="/web-three/base/vue2.x/1.index.html" class="nav-link">
+  三.模型案例
+</a></li><li class="dropdown-item"><!----> <a href="/web-three/base/vue3.x/1.index.html" class="nav-link">
+  四.动画案例
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="高级知识" class="dropdown-title"><span class="title">高级知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="高级知识" class="mobile-dropdown-title"><span class="title">高级知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web-three/senior/1.micro/1.index.html" class="nav-link">
+  一.DOM Tree、CSSOM
+</a></li><li class="dropdown-item"><!----> <a href="/web-three/senior/2.typescript/1.index.html" class="nav-link">
+  二.渲染、绘制
+</a></li><li class="dropdown-item"><!----> <a href="/web-three/senior/3.deploy/1.index.html" class="nav-link">
+  三.会话
+</a></li><li class="dropdown-item"><!----> <a href="/web-three/senior/4.component/1.index.html" class="nav-link">
+  四.事件循环
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="three.js源码" class="dropdown-title"><span class="title">three.js源码</span> <span class="arrow down"></span></button> <button type="button" aria-label="three.js源码" class="mobile-dropdown-title"><span class="title">three.js源码</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web-three/source/vue-cli2.x/1.index.html" class="nav-link">
+  一.Vue/cli2.x
+</a></li><li class="dropdown-item"><!----> <a href="/web-three/source/vue2.x/1.index.html" class="nav-link">
+  二.Vue 2.x
+</a></li><li class="dropdown-item"><!----> <a href="/web-three/source/vue-router3.x/1.index.html" class="nav-link">
+  三.Vue-Router3.x
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/web-three/base/project/1.index.html" aria-current="page" class="active sidebar-link">基础案例</a></li><li><a href="/web-three/base/project/1.config.html" class="sidebar-link">一.基础案例</a></li><li><a href="/web-three/base/project/2.skill.html" class="sidebar-link">二.基础场景</a></li><li><a href="/web-three/base/project/3.configureWebpack.html" class="sidebar-link">三.光源</a></li><li><a href="/web-three/base/project/4.projectMonitor.html" class="sidebar-link">四.材质</a></li><li><a href="/web-three/base/project/5.test.html" class="sidebar-link">五.二维几何</a></li><li><a href="/web-three/base/project/6.configurePrem.html" class="sidebar-link">六.三维</a></li><li><a href="/web-three/base/project/7.internationalization.html" class="sidebar-link">七.粒子</a></li><li><a href="/web-three/base/project/8.errorCollection.html" class="sidebar-link">八.模型</a></li><li><a href="/web-three/base/project/9.optimize.html" class="sidebar-link">九.动画</a></li><li><a href="/web-three/base/project/10.server.html" class="sidebar-link">十.纹理</a></li><li><a href="/web-three/base/project/11.pwa.html" class="sidebar-link">十一.组合</a></li><li><a href="/web-three/base/project/12.upload.html" class="sidebar-link">十二.其他</a></li><li><a href="/web-three/base/project/13.video.html" class="sidebar-link">十三.综合</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="基础案例"><a href="#基础案例" class="header-anchor">#</a> 基础案例</h1> <h2 id="_1-基础案例"><a href="#_1-基础案例" class="header-anchor">#</a> 1.基础案例</h2> <h2 id="_2-场景"><a href="#_2-场景" class="header-anchor">#</a> 2.场景</h2> <h3 id="场景-scene"><a href="#场景-scene" class="header-anchor">#</a> 场景（Scene）</h3> <ul><li>场景能够让你在什么地方、摆放什么东西来交给 three.js 来渲染，这是你放置物体、灯光和摄像机的地方</li></ul> <h3 id="雾-fog"><a href="#雾-fog" class="header-anchor">#</a> 雾（Fog）</h3> <ul><li>这个类中的参数定义了线性雾。也就是说，雾的密度是随着距离线性增大的</li></ul> <h3 id="雾-指数-fogexp2"><a href="#雾-指数-fogexp2" class="header-anchor">#</a> 雾-指数（FogExp2）</h3> <ul><li>该类所包含的参数定义了指数雾，它可以在相机附近提供清晰的视野，且距离相机越远，雾的浓度随着指数增长越快</li></ul> <h2 id="_3-光源"><a href="#_3-光源" class="header-anchor">#</a> 3.光源</h2> <h3 id="_3-1-环境光-ambientlight"><a href="#_3-1-环境光-ambientlight" class="header-anchor">#</a> 3.1 环境光（AmbientLight）</h3> <ul><li>环境光会均匀的照亮场景中的所有物体。</li> <li>环境光不能用来投射阴影，因为它没有方向。</li></ul> <h3 id="_3-2-点光源-pointlight"><a href="#_3-2-点光源-pointlight" class="header-anchor">#</a> 3.2 点光源（PointLight）</h3> <ul><li>从一个点向各个方向发射的光源。一个常见的例子是模拟一个灯泡发出的光。</li> <li>该光源可以投射阴影</li></ul> <h3 id="_3-3-聚光灯-spotlight"><a href="#_3-3-聚光灯-spotlight" class="header-anchor">#</a> 3.3 聚光灯（SpotLight）</h3> <ul><li>光线从一个点沿一个方向射出，随着光线照射的变远，光线圆锥体的尺寸也逐渐增大。</li> <li>该光源可以投射阴影</li></ul> <h3 id="环境光探针-ambientlightprobe"><a href="#环境光探针-ambientlightprobe" class="header-anchor">#</a> 环境光探针（AmbientLightProbe）</h3> <ul><li>光照探针是一种在 3D 场景中添加光源的另一种方法。 AmbientLightProbe 是场景中单个环境光的光照估算数据。</li></ul> <h3 id="平行光-directionallight"><a href="#平行光-directionallight" class="header-anchor">#</a> 平行光（DirectionalLight）</h3> <ul><li>平行光是沿着特定方向发射的光。这种光的表现像是无限远,从它发出的光线都是平行的。常常用平行光来模拟太阳光
+的效果; 太阳足够远，因此我们可以认为太阳的位置是无限远，所以我们认为从太阳发出的光线也都是平行的。</li></ul> <h3 id="半球光-hemispherelight"><a href="#半球光-hemispherelight" class="header-anchor">#</a> 半球光（HemisphereLight）</h3> <ul><li>光源直接放置于场景之上，光照颜色从天空光线颜色渐变到地面光线颜色。</li> <li>半球光不能投射阴影。</li></ul> <h3 id="半球光探针-hemispherelightprobe"><a href="#半球光探针-hemispherelightprobe" class="header-anchor">#</a> 半球光探针 HemisphereLightProbe</h3> <ul><li>光照探针是一种在 3D 场景中添加光源的另一种方法。 HemisphereLightProbe 是场景中单个半球光的光照估算数据</li></ul> <h3 id="light"><a href="#light" class="header-anchor">#</a> Light</h3> <ul><li>光源的基类 – 所有其他的光类型都继承了该类描述的属性和方法</li></ul> <h3 id="光照探针-lightprobe"><a href="#光照探针-lightprobe" class="header-anchor">#</a> 光照探针 LightProbe</h3> <p>光照探针是一种在 3D 场景中添加光源的另一种方法。与经典光源（平行光、点光、聚光）不同，
+光照探针不发光。相反，光照探针存储着有关穿过 3D 空间的光线的信息。
+渲染过程中，通过使用来自光照探针的数据，来逼近打到 3D 物体上的光线。</p> <p>光照探针通常从（辐射）环境贴图中创建。 LightProbeGenerator 类可以根据 CubeTexture 或
+WebGLCubeRenderTarget 的实例来创建光照探针。
+但是，光照估算数据同样可以以其他形式提供，例如，通过 WebXR。
+这将能够渲染可对真实世界的光照做出反应的增强现实内容。</p> <p>three.js 中，当前的探针实现支持所谓的漫反射光照探针。
+这种类型的光照探针功能上等效于辐照环境贴图</p> <h3 id="平面光光源-rectarealight"><a href="#平面光光源-rectarealight" class="header-anchor">#</a> 平面光光源（RectAreaLight）</h3> <p>平面光光源从一个矩形平面上均匀地发射光线。这种光源可以用来模拟像明亮的窗户或者条状灯光光源。</p> <p>注意事项:</p> <p>不支持阴影。
+只支持 MeshStandardMaterial 和 MeshPhysicalMaterial 两种材质。
+你必须在你的场景中加入 RectAreaLightUniformsLib ，并调用 init()。</p> <h2 id="_4-材质"><a href="#_4-材质" class="header-anchor">#</a> 4.材质</h2> <h3 id="基础线条材质-linebasicmaterial"><a href="#基础线条材质-linebasicmaterial" class="header-anchor">#</a> 基础线条材质（LineBasicMaterial）</h3> <ul><li>一种用于绘制线框样式几何体的材质</li></ul> <h3 id="虚线材质-linedashedmaterial"><a href="#虚线材质-linedashedmaterial" class="header-anchor">#</a> 虚线材质(LineDashedMaterial)</h3> <ul><li>一种用于绘制虚线样式几何体的材质</li></ul> <h3 id="材质-material"><a href="#材质-material" class="header-anchor">#</a> 材质(Material)</h3> <p>材质的抽象基类。</p> <p>材质描述了对象 objects 的外观。它们的定义方式与渲染器无关，
+因此，如果您决定使用不同的渲染器，不必重写材质。</p> <p>所有其他材质类型都继承了以下属性和方法（尽管它们可能具有不同的默认值）</p> <h3 id="基础网格材质-meshbasicmaterial"><a href="#基础网格材质-meshbasicmaterial" class="header-anchor">#</a> 基础网格材质(MeshBasicMaterial)</h3> <ul><li>一个以简单着色（平面或线框）方式来绘制几何体的材质。</li> <li>这种材质不受光照的影响</li></ul> <h3 id="深度网格材质-meshdepthmaterial"><a href="#深度网格材质-meshdepthmaterial" class="header-anchor">#</a> 深度网格材质(MeshDepthMaterial)</h3> <ul><li>一种按深度绘制几何体的材质。深度基于相机远近平面。白色最近，黑色最远</li></ul> <h3 id="meshdistancematerial"><a href="#meshdistancematerial" class="header-anchor">#</a> MeshDistanceMaterial</h3> <p>MeshDistanceMaterial 在内部用于使用 PointLight 来实现阴影映射。
+也可以用于通过将 MeshDistanceMaterial 实例指定给 Object3D.customDistanceMaterial，来自定义物体阴影投射</p> <h3 id="lambert-网格材质-meshlambertmaterial"><a href="#lambert-网格材质-meshlambertmaterial" class="header-anchor">#</a> Lambert 网格材质(MeshLambertMaterial)</h3> <p>一种非光泽表面的材质，没有镜面高光。</p> <p>该材质使用基于非物理的 Lambertian 模型来计算反射率。
+这可以很好地模拟一些表面（例如未经处理的木材或石材），但不能模拟具有镜面高光的光泽表面（例如涂漆木材）。</p> <p>使用 Gouraud 着色模型计算着色。这将计算每个顶点的着色
+（即在 vertex shader 中）并在多边形的面上插入结果。</p> <p>由于反射率和光照模型的简单性，MeshPhongMaterial，MeshStandardMaterial 或者 MeshPhysicalMaterial
+上使用这种材质时会以一些图形精度为代价，得到更高的性能</p> <h3 id="meshmatcapmaterial"><a href="#meshmatcapmaterial" class="header-anchor">#</a> MeshMatcapMaterial</h3> <p>MeshMatcapMaterial 由一个材质捕捉（MatCap，或光照球（Lit Sphere））纹理所定义，其编码了材质的颜色与明暗。</p> <p>由于 mapcap 图像文件编码了烘焙过的光照，因此 MeshMatcapMaterial 不对灯光作出反应。
+它将会投射阴影到一个接受阴影的物体上(and shadow clipping works)，但不会产生自身阴影或是接受阴影</p> <h3 id="法线网格材质-meshnormalmaterial"><a href="#法线网格材质-meshnormalmaterial" class="header-anchor">#</a> 法线网格材质(MeshNormalMaterial)</h3> <ul><li>一种把法向量映射到 RGB 颜色的材质</li></ul> <h3 id="phong-网格材质-meshphongmaterial"><a href="#phong-网格材质-meshphongmaterial" class="header-anchor">#</a> Phong 网格材质(MeshPhongMaterial)</h3> <p>一种用于具有镜面高光的光泽表面的材质。</p> <p>该材质使用非物理的 Blinn-Phong 模型来计算反射率。
+与 MeshLambertMaterial 中使用的 Lambertian 模型不同，该材质可以模拟具有镜面高光的光泽表面（例如涂漆木材）。</p> <p>使用 Phong 着色模型计算着色时，会计算每个像素的阴影（在 fragment shader，
+AKA pixel shader 中），与 MeshLambertMaterial 使用的 Gouraud 模型相比，该模型的结果更准确，但代价是牺牲一些性能。
+MeshStandardMaterial 和 MeshPhysicalMaterial 也使用这个着色模型。</p> <p>在 MeshStandardMaterial 或 MeshPhysicalMaterial 上使用此材质时，性能通常会更高 ，但会牺牲一些图形精度</p> <h3 id="物理网格材质-meshphysicalmaterial"><a href="#物理网格材质-meshphysicalmaterial" class="header-anchor">#</a> 物理网格材质(MeshPhysicalMaterial)</h3> <p>MeshStandardMaterial 的扩展，提供了更高级的基于物理的渲染属性</p> <h3 id="标准网格材质-meshstandardmaterial"><a href="#标准网格材质-meshstandardmaterial" class="header-anchor">#</a> 标准网格材质(MeshStandardMaterial)</h3> <p>一种基于物理的标准材质，使用 Metallic-Roughness 工作流程。</p> <p>基于物理的渲染（PBR）最近已成为许多 3D 应用程序的标准，例如 Unity，
+Unreal 和
+3D Studio Max。</p> <p>这种方法与旧方法的不同之处在于，不使用近似值来表示光与表面的相互作用，而是使用物理上正确的模型。
+我们的想法是，不是在特定照明下调整材质以使其看起来很好，而是可以创建一种材质，能够“正确”地应对所有光照场景</p> <h3 id="meshtoonmaterial"><a href="#meshtoonmaterial" class="header-anchor">#</a> MeshToonMaterial</h3> <h3 id="点材质-pointsmaterial"><a href="#点材质-pointsmaterial" class="header-anchor">#</a> 点材质(PointsMaterial)</h3> <p>Points 使用的默认材质</p> <h3 id="原始着色器材质-rawshadermaterial"><a href="#原始着色器材质-rawshadermaterial" class="header-anchor">#</a> 原始着色器材质(RawShaderMaterial)</h3> <p>此类的工作方式与 ShaderMaterial 类似，不同之处在于内置的 uniforms 和 attributes 的定义不会自动添加到 GLSL shader 代码中</p> <h3 id="着色器材质-shadermaterial"><a href="#着色器材质-shadermaterial" class="header-anchor">#</a> 着色器材质(ShaderMaterial)</h3> <p>使用自定义 shader 渲染的材质。
+shader 是一个用 GLSL 编写的小程序 ，在 GPU 上运行。
+您可能需要使用自定义 shader，如果你要：</p> <p>要实现内置 materials 之外的效果。
+将许多对象组合成单个 BufferGeometry 以提高性能</p> <h3 id="阴影材质-shadowmaterial"><a href="#阴影材质-shadowmaterial" class="header-anchor">#</a> 阴影材质(ShadowMaterial)</h3> <p>此材质可以接收阴影，但在其他方面完全透明</p> <h3 id="点精灵材质-spritematerial"><a href="#点精灵材质-spritematerial" class="header-anchor">#</a> 点精灵材质(SpriteMaterial)</h3> <p>一种使用 Sprite 的材质</p> <h2 id="_5-二维几何"><a href="#_5-二维几何" class="header-anchor">#</a> 5.二维几何</h2> <h2 id="_6-三维"><a href="#_6-三维" class="header-anchor">#</a> 6.三维</h2> <h2 id="_7-粒子"><a href="#_7-粒子" class="header-anchor">#</a> 7.粒子</h2> <h2 id="_8-模型"><a href="#_8-模型" class="header-anchor">#</a> 8.模型</h2> <h2 id="_9-动画"><a href="#_9-动画" class="header-anchor">#</a> 9.动画</h2> <h2 id="_10-纹理"><a href="#_10-纹理" class="header-anchor">#</a> 10.纹理</h2> <h2 id="_11-组合"><a href="#_11-组合" class="header-anchor">#</a> 11.组合</h2> <h2 id="_12-其他"><a href="#_12-其他" class="header-anchor">#</a> 12.其他</h2> <h2 id="_13-综合"><a href="#_13-综合" class="header-anchor">#</a> 13.综合</h2></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2022/6/10 08:34:19</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/web-three/base/project/1.config.html">
+        一.基础案例
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----><!----></div></div>
+    <script src="/web-three/assets/js/app.90d423e6.js" defer></script><script src="/web-three/assets/js/3.53e65a00.js" defer></script><script src="/web-three/assets/js/57.2d882207.js" defer></script><script src="/web-three/assets/js/49.baa472db.js" defer></script>
+  </body>
+</html>
