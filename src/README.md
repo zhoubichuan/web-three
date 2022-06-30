@@ -24,20 +24,20 @@ meta:
         <p>掌握three.js几何、材质、光源、粒子、模型、动画、纹理等相关场景的案例开发</p>
       </div>
       <div class="feature">
-        <h2><a href="/web-three/base/vue2.x/1.index.html">综合案例</a></h2> 
-        <p>掌握Vue2.x全家桶和Vue3.x全家桶中重点知识，对相关官方文档进行一些知识的补充，全面提升Vue的基础知识能力</p>
+        <h2><a href="/web-three/base/vue2.x/1.index.html">模型案例</a></h2> 
+        <p>掌握使用three.js加载各种常见的模型数据，使用相关特效</p>
       </div>
       <div class="feature">
-        <h2><a href="/web-three/senior/component/1.index.html">复杂案例</a></h2> 
-        <p>了解组件设计思路，组件编写工作流搭建，从0编写复杂组件之异步级联组件 单元测试编写及组件的发布</p>
+        <h2><a href="/web-three/senior/component/1.index.html">动画案例</a></h2> 
+        <p>数练使用three.js制作相关动画案例</p>
       </div>
       <div class="feature">
-        <h2><a href="/web-three/senior/typescript/1.index.html">TypeScript的应用</a></h2> 
-        <p>了解在大型项目中使用TypeScript构建和开发前端项目的一些基础知识，以及需要注意的一些问题</p>
+        <h2><a href="/web-three/senior/typescript/1.index.html">性能优化</a></h2> 
+        <p>列举常见的性能优化场景</p>
       </div>
       <div class="feature">
-        <h2><a href="/web-three/senior/deploy/1.index.html">Vue的构建布署</a></h2> 
-        <p>了解vue项目中使用gitlab、genkins、以及 docker + nginx实现vue的布署和持续集成的一些基本知识</p>
+        <h2><a href="/web-three/senior/deploy/1.index.html">深入理论</a></h2> 
+        <p>了解three.js底层相关知识点</p>
       </div>
       <div class="feature">
         <h2><a href="/web-three/source/vue2.x/1.index.html">Vue 2.x源码实现</a></h2> 
@@ -48,8 +48,8 @@ meta:
         <p>深入了解Vue/cli3.x原理、Vue 3.x原理剖析、Vue-router4.x理剖析、Vuex4.x理剖析</p>
       </div>
       <div class="feature">
-        <h2><a href="https://cn.vuejs.org">Vue 相关资料</a></h2> 
-        <p>主要介绍一些vue额外相关的资料、相关的书籍对vue相关知识进行一些补充</p>
+        <h2><a href="https://cn.vuejs.org">three.js相关资料</a></h2> 
+        <p>主要介绍一些three.js额外相关的资料、相关的书籍对three.js相关知识进行一些补充</p>
       </div>
     </div>
   </div>
