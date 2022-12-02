@@ -24,7 +24,7 @@ meta:
         <p>掌握three.js几何、材质、光源、粒子、模型、动画、纹理等相关场景的案例开发</p>
       </div>
       <div class="feature">
-        <h2><a href="/web-three/base/vue2.x/1.index.html">模型案例</a></h2> 
+        <h2><a href="/web-three/base/vue2.x/1.index.html">综合案例</a></h2> 
         <p>掌握使用three.js加载各种常见的模型数据，使用相关特效</p>
       </div>
       <div class="feature">
@@ -40,16 +40,8 @@ meta:
         <p>了解three.js底层相关知识点</p>
       </div>
       <div class="feature">
-        <h2><a href="/web-three/source/vue2.x/1.index.html">Vue 2.x源码实现</a></h2> 
-        <p>深入了解Vue/cli2.x原理、Vue 2.x原理剖析、Vue-router3.x原理剖析、Vuex3.x原理剖析 </p>
-      </div>
-      <div class="feature">
-        <h2><a href="/web-three/source/vue3.x/1.index.html">Vue 3.x源码实现</a></h2> 
-        <p>深入了解Vue/cli3.x原理、Vue 3.x原理剖析、Vue-router4.x理剖析、Vuex4.x理剖析</p>
-      </div>
-      <div class="feature">
-        <h2><a href="https://cn.vuejs.org">three.js相关资料</a></h2> 
-        <p>主要介绍一些three.js额外相关的资料、相关的书籍对three.js相关知识进行一些补充</p>
+        <h2><a href="/web-three/source/vue2.x/1.index.html">源码解读</a></h2> 
+        <p>深入了解three.js源码，对复杂开发场景提供优化设计思路</p>
       </div>
     </div>
   </div>
