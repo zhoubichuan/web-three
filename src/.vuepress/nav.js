@@ -23,19 +23,19 @@ const nav = [{
     text: '高级知识',
     items: [
         {
-            text: '一.DOM Tree、CSSOM',
+            text: '一.',
             link: '/senior/1.micro/1.index'
         },
         {
-            text: '二.渲染、绘制',
+            text: '二.',
             link: '/senior/2.typescript/1.index'
         },
         {
-            text: '三.会话',
+            text: '三.',
             link: '/senior/3.deploy/1.index'
         },
         {
-            text: '四.事件循环',
+            text: '四.',
             link: '/senior/4.component/1.index'
         }
     ]
@@ -44,15 +44,15 @@ const nav = [{
     text: 'three.js源码',
     items: [
         {
-            text: '一.Vue/cli2.x',
+            text: '一.',
             link: '/source/vue-cli2.x/1.index'
         },
         {
-            text: '二.Vue 2.x',
+            text: '二.',
             link: '/source/vue2.x/1.index'
         },
         {
-            text: '三.Vue-Router3.x',
+            text: '三.',
             link: '/source/vue-router3.x/1.index'
         }
     ]
