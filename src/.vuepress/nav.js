@@ -19,43 +19,43 @@ const nav = [{
         }
     ]
 },
-{
-    text: '高级知识',
-    items: [
-        {
-            text: '一.',
-            link: '/senior/1.micro/1.index'
-        },
-        {
-            text: '二.',
-            link: '/senior/2.typescript/1.index'
-        },
-        {
-            text: '三.',
-            link: '/senior/3.deploy/1.index'
-        },
-        {
-            text: '四.',
-            link: '/senior/4.component/1.index'
-        }
-    ]
-},
-{
-    text: 'three.js源码',
-    items: [
-        {
-            text: '一.',
-            link: '/source/vue-cli2.x/1.index'
-        },
-        {
-            text: '二.',
-            link: '/source/vue2.x/1.index'
-        },
-        {
-            text: '三.',
-            link: '/source/vue-router3.x/1.index'
-        }
-    ]
-}
+// {
+//     text: '高级知识',
+//     items: [
+//         {
+//             text: '一.',
+//             link: '/senior/1.micro/1.index'
+//         },
+//         {
+//             text: '二.',
+//             link: '/senior/2.typescript/1.index'
+//         },
+//         {
+//             text: '三.',
+//             link: '/senior/3.deploy/1.index'
+//         },
+//         {
+//             text: '四.',
+//             link: '/senior/4.component/1.index'
+//         }
+//     ]
+// },
+// {
+//     text: 'three.js源码',
+//     items: [
+//         {
+//             text: '一.',
+//             link: '/source/vue-cli2.x/1.index'
+//         },
+//         {
+//             text: '二.',
+//             link: '/source/vue2.x/1.index'
+//         },
+//         {
+//             text: '三.',
+//             link: '/source/vue-router3.x/1.index'
+//         }
+//     ]
+// }
 ]
 module.exports = nav
